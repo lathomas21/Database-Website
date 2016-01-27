@@ -1,0 +1,20 @@
+// insert 
+$sql = "INSERT INTO User (name, password, email, address, id, is_Staff) VALUES ('".$name."', '".$password."', '".$email."', '".$address."', DEFAULT, 0)";
+
+$sql = "INSERT INTO Product(id, name, price, stockQuantity, description, active, supplier_id) VALUES (DEFAULT, $name, $price, $stockQuantity, $description, 1, $supplier_id)";
+
+$sql = "INSERT INTO Orders(id, date, paid, user_id) VALUES (DEFAULT, CURDATE (), $paid, $user_id)";
+
+//delete
+
+$sql = "DELETE FROM User WHERE id= ".$id" ";
+$sql = "DELETE FROM Product WHERE id= ".$id" ";
+$sql = "DELETE FROM Orders WHERE id= ".$id";
+
+//Update
+
+$sql = "UPDATE User SET name= name WHERE name= $_SESSION["user"] ";
+
+$sql = "UPDATE Product SET name= name WHERE name= $_SESSION["user"] ";
+
+$sql = "UPDATE Orders SET name= name WHERE name= $_SESSION["user"] ";
